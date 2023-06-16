@@ -5,11 +5,11 @@ class Solution {
         int day = 0;
         String answer = "";
         
-        if(a > 1) {
+    
             for(int i=0; i<a-1; i++) {             // 1월부터 입력한 전달까지만 
                 day += monthDay[i];
             }
-        }
+
         day = day + b;        
         
         answer = dayWeek[(day % 7)]; 
