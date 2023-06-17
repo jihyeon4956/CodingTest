@@ -1,12 +1,5 @@
 class Solution {
-public long solution(int price, int money, int count) {
-long answer = -1;
-
-for(int i=1; i<=count; i++){
-money -= price * i;
-}
-answer = (money < 0)? (long)money * (-1):0;
-
-return answer;
-}
+    public long solution(int price, int money, int count) {
+        return Math.max((long)price * (count * (count + 1) / 2) - money, 0);
+    }
 }
