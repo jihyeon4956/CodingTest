@@ -1,6 +1,6 @@
 class Solution {
     public String solution(int a, int b) {
-        String dayWeek[] = {"THU","FRI","SAT","SUN","MON","TUE","WED"};       //요일판별
+        String dayWeek[] = {"THU","FRI","SAT","SUN","MON","TUE","WED"};  //요일판별
         int monthDay[] ={31,29,31,30,31,30,31,31,30,31,30,31};  //한달일수
         int day = 0;
         String answer = "";
@@ -10,9 +10,6 @@ class Solution {
                 day += monthDay[i];
             }
 
-        day = day + b;        
-        
-        answer = dayWeek[(day % 7)]; 
-        return answer;
+        return dayWeek[((day + b) % 7)];
     }
 }
