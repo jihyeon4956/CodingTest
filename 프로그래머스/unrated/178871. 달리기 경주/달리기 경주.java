@@ -8,7 +8,6 @@ class Solution {
         for (int i = 0; i < players.length; i++) {
             map.put(players[i], i);
         }
-        // callings에 따라 선수들의 순서를 변경
         for (String player : callings) {
             int idx = map.get(player); // 이름이 불린 선수의 인덱스를 가져옴
             String frontPlayer = players[idx - 1]; // 이름이 불린 선수의 바로 앞에 있는 선수를 가져옴
