@@ -4,7 +4,7 @@ class Solution {
         double sqrt = Math.sqrt(n);
         
         if(Math.sqrt(n) % 1.0 == 0) {
-            answer = Math.round(sqrt);
+            answer = (long)sqrt;
             answer = (answer+1) * (answer+1);
         } else answer = -1;
         
