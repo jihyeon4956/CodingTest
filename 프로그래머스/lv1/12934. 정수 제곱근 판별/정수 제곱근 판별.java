@@ -11,3 +11,11 @@ class Solution {
         return answer;
     }
 }
+
+// class Solution {
+//  public long solution(long n) {
+//         double root = sqrt(n);
+        
+//         return floor(root)==root?(long)((root+1)*(root+1)):-1;
+     
+//      }
