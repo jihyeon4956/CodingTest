@@ -14,8 +14,12 @@ import java.util.Arrays;
 
 class Solution {
     public String solution(String[] seoul) {
-        String find = "Kim";
-        int answer = Arrays.asList(seoul).indexOf(find);
+        int answer = 0;
+        
+        for(String str: seoul){
+            if (str.equals("Kim")) break;
+            else answer ++;
+        }
         
     return "김서방은 " + answer + "에 있다";    
   }
