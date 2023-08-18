@@ -1,22 +1,14 @@
 class Solution {
-
     public long solution(int a, int b) {
-        return sumAtoB(Math.min(a, b), Math.max(b, a));
-    }
-
-    private long sumAtoB(long a, long b) {
-        return (b - a + 1) * (a + b) / 2;
+        long answer = 0;
+        int min, max = 0;
+        if(a >= b){
+            max = a;
+            min = b;
+        } else {
+            max = b;
+            min = a;
+        }
+        return (long)(max-min+1)*(min + max)/2;
     }
 }
-
-
-// class Solution {
-
-//     public long solution(int a, int b) {
-//         return sumAtoB(Math.min(a, b), Math.max(b, a));
-//     }
-
-//     private long sumAtoB(long a, long b) {
-//         return (b - a + 1) * (a + b) / 2;
-//     }
-// }
