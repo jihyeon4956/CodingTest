@@ -1,24 +1,17 @@
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
+import java.util.stream.IntStream;
 
 class Solution {
-    public ArrayList<Integer> solution(int[] arr) {
-        ArrayList<Integer> sort = new ArrayList<>();
-        for(int n:arr){
-            sort.add(n);
-        }
-        Collections.sort(sort);
-        int min = sort.get(0);
+    public int[] solution(int[] arr) {
+   
+       int min = Arrays.stream(arr).min().getAsInt();  
+        
+       if(arr.length == 1) {
+            return new int[] {-1};
+       }
 
-        ArrayList<Integer> answer = new ArrayList<>();
-            for(int a:arr){
-                if ( a != min) {
-                    answer.add(a);
-                }
-            }
-        if(answer.size() == 0){
-            answer.add(-1);
-        }
-        return answer;
+       return Arrays.stream(arr)
+            .filter(num -> num != min)
+            .toArray();
     }
 }
