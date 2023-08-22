@@ -3,15 +3,16 @@ import java.util.*;
 public class Solution {
     public ArrayList solution(int []arr) {
         ArrayList<Integer> answer = new ArrayList<>();
-        answer.add(arr[0]);
+        int preNum = 10;
         
-        for(int i=1; i<arr.length; i++){
-            if(arr[i] != arr[i-1]){
-                answer.add(arr[i]);
+        for(int a: arr){
+            if(a != preNum) {
+                answer.add(a);
+                preNum = a;
             }
-        }        
-
-    
+            
+        }
+        
         return answer;
     }
 }
